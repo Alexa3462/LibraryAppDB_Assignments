@@ -29,5 +29,4 @@ public class BorrowedBooksPage extends BasePage{
             each.click();
         }
     }
-
 }

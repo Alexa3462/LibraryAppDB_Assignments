@@ -68,6 +68,5 @@ public class B28G31_150_StepDefs_BG {
         String expectedResult = DB_Util.getCellValue(1, 2);
         Assert.assertTrue(borrowedBookList.contains(expectedResult));
         borrowedBooksPage.returnBooks();
-        //comment
     }
 }
