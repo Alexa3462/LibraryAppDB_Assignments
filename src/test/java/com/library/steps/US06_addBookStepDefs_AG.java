@@ -10,6 +10,8 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 public class US06_addBookStepDefs_AG {
 
     LoginPage loginPage = new LoginPage();
@@ -90,14 +92,17 @@ public class US06_addBookStepDefs_AG {
 
     @Then("verify {string} information must match with DB AG")
     public void verify_information_must_match_with_db_ag(String bookName) {
-        DB_Util.createConnection();
 
-        DB_Util.runQuery("select name from books where isbn = 12112021");
 
-        DB_Util.destroy();
+        DB_Util.runQuery("select name from books where name='"+bookName+"'");
 
-        String actualBookName= DB_Util.getFirstRowFirstColumn();
-        System.out.println(actualBookName);
+
+        List<String> actualBookNames = DB_Util.getColumnDataAsList(1);
+        System.out.println("actualBookNames = " + actualBookNames);
+
+        Assert.assertTrue(actualBookNames.contains(bookName));
+        
+
 
     }
 

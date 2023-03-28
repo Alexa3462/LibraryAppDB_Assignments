@@ -38,5 +38,7 @@ select * from book_borrow;
 select name from books
 where isbn = 12112021;
 
+select * from books
+where name = 'Clean Code AG';
 
 
