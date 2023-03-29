@@ -1,7 +1,7 @@
-@B28G31-164 @ui @db
+@B28G31-164  @db
 Feature: Default
 
-	@B28G31-163 @ui @db
+	@B28G31-163  @db
 	Scenario: verify the common book genre that’s being borrowed- ZU
 		Feature: As a data consumer, I want to know genre of books are being borrowed the most - ZU
 		
