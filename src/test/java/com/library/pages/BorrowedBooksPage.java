@@ -13,6 +13,9 @@ public class BorrowedBooksPage extends BasePage{
     @FindBy(xpath = "//tbody//td[2]")
     public List<WebElement> allBorrowedBooksName;
 
+    @FindBy(xpath = "//tbody//td['Fantasy']")
+    public List<WebElement> theMostPopularBorrowed;
+
     @FindBy(xpath = "//tbody//td[.='NOT RETURNED ']/preceding-sibling::td[4]")
     public List<WebElement> notReturnedBooks;
 
