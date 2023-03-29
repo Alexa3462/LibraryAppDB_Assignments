@@ -1,5 +1,5 @@
 @B28G31-164  @db
-Feature: Default
+Feature: verify the common book genre that’s being borrowed- ZU
 
 	@B28G31-163  @db
 	Scenario: verify the common book genre that’s being borrowed- ZU
