@@ -1,7 +1,7 @@
 Feature: Default
 
 	#As a librarian, I want to know borrowed books number 
-	@B28G31-160
+	@B28G31-160 @ui @db
 	Scenario: As a librarian, I want to know borrowed books number - EL
 		Given the "librarian" is on the home page 
 		When the librarian gets borrowed books number 
