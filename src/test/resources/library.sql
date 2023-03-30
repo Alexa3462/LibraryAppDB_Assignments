@@ -1,10 +1,10 @@
 -- US 01
 select count(id) from users;
--- 1855
+-- 1856
 
 select count(distinct id) from users;
 
--- 1855
+-- 1856
 
 
 -- Result Manually passed
