@@ -18,6 +18,6 @@ Feature: Books module
 
     Examples:
       | Book Name                | ISBN     | Year | Author       | Book Category        |
-      | Clean Code AG            | 12112021 | 2021 | Kathy Sierra | Fantasy              |
-      | Head First Java AG       | 10112021 | 2021 | Kathy Sierra | Action and Adventure |
-      | The Scrum Field Guide AG | 11112021 | 2006 | Mitch Lacey  | Short Story          |
+      | Clean Code MG            | 12112021 | 2021 | Kathy Sierra | Fantasy              |
+      | Head First Java MG       | 10112021 | 2021 | Kathy Sierra | Action and Adventure |
+      | The Scrum Field Guide MG | 11112021 | 2006 | Mitch Lacey  | Short Story          |
