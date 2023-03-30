@@ -33,12 +33,14 @@ public class B28G31_159_StepDefs_MG {
         dashBoardPage.navigateModule(Books);
         BrowserUtil.waitFor(5);
     }
+
     @When("the librarian click to add book - MG")
     public void the_librarian_click_to_add_book_mg() {
 
         bookPage.addBook.click();
         BrowserUtil.waitFor(5);
     }
+
     @When("the librarian enter book name {string} - MG")
     public void the_librarian_enter_book_name_mg(String BookName) {
         bookPage.bookName.sendKeys(BookName);
@@ -59,15 +61,18 @@ public class B28G31_159_StepDefs_MG {
     @When("the librarian choose the book category {string} - MG")
     public void the_librarian_choose_the_book_category_mg(String BookCategory) {
         BrowserUtil.selectOptionDropdown(bookPage.categoryDropdown, BookCategory);
+
         BrowserUtil.waitFor(5);
+
     }
     @When("the librarian click to save changes - MG")
     public void the_librarian_click_to_save_changes_mg() {
+
         bookPage.saveChanges.click();
     }
     @Then("verify {string} message is displayed - MG")
-    public void verify_message_is_displayed_mg() {
-       Assert.assertTrue(bookPage.toastMessage.isDisplayed());
+    public void verify_message_is_displayed_mg(String expectedMessage) {
+       Assert.assertEquals(expectedMessage,bookPage.toastMessage.getText());
 
     }
     @Then("verify {string} information must match with DB - MG")
