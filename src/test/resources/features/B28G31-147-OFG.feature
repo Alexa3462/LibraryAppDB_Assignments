@@ -1,4 +1,4 @@
-@B28G31-153
+@B28G31-153 @ui
 Feature: Default
 
 	Background:
@@ -8,7 +8,7 @@ Feature: Default
 		
 
 	#As a data consumer, I want UI and DB book information are match.
-	@B28G31-152
+	@B28G31-152 @db
 	Scenario: US1AC1 Verify book information with DB - OFG
 		When the user navigates to "Books" page - OFG
 		And the user searches for "farukgoc" book - OFG

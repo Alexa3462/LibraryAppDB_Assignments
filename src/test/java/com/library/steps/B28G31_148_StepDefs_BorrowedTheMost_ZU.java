@@ -12,22 +12,12 @@ import org.junit.Assert;
 
 public class B28G31_148_StepDefs_BorrowedTheMost_ZU {
 
-    LoginPage loginPage = new LoginPage();
-
-
-    @Given("the {string} on the home page ZU")
-    public void the_on_the_home_page_ag(String userType) {
-
-        loginPage.login(userType);
-
-
-    }
 
     @Given("Establish the database connection - ZU")
     public void establish_the_database_connection_zu() {
-       // DB_Util.createConnection();
+       DB_Util.createConnection();
     }
-
+    String actualGenre;
 
     @When("I execute query to find most popular book genre - ZU")
     public void i_execute_query_to_find_most_popular_book_genre_zu() {
@@ -37,12 +27,14 @@ public class B28G31_148_StepDefs_BorrowedTheMost_ZU {
             "         INNER JOIN book_categories bc ON b.book_category_id = bc.id\n" +
             "GROUP BY bc.name\n" +
             "ORDER BY count(*) DESC;");
+
+    actualGenre=DB_Util.getFirstRowFirstColumn();
     }
+
 
 
     @Then("verify {string} is the most popular book genre. - ZU")
     public void verify_is_the_most_popular_book_genre_zu(String expectedGenre) {
-        String actualGenre = "Fantasy";
         Assert.assertEquals(expectedGenre, actualGenre);
 
         System.out.println("actualGenre = " + actualGenre);

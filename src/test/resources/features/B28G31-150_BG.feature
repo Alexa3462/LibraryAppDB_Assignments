@@ -8,4 +8,4 @@ Feature: Books module
     And the user searches for "Bobby Book" book - BG
     When the user clicks Borrow Book - BG
     Then verify that book is shown in "Borrowing Books" page - BG
-    And  verify logged student has same book in database -  BG
+    And  verify logged student has same book in database - BG
