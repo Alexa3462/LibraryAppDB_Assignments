@@ -47,4 +47,14 @@ where isbn = 12112021;
 select * from books
 where name = 'Clean Code AG';
 
+SELECT bc.name, COUNT(*)
+FROM book_borrow bb
+         INNER JOIN books b ON bb.book_id = b.id
+         INNER JOIN book_categories bc ON b.book_category_id = bc.id
+GROUP BY bc.name
+ORDER BY count(*) DESC;
+
+
+
+
 

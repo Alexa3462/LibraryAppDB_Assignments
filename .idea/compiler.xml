@@ -9,5 +9,8 @@
         <module name="LibraryAppDB_Assignments" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="LibraryAppDB_Project" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
