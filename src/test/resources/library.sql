@@ -21,6 +21,11 @@ select * from book_borrow;
 --  where is_returned = '0' === > 474
 
 -- Us 3
+select name from book_categories;
+select b.name as bookName, author, bc.name as bookCategoryName from books b inner join
+                                                                    book_categories bc on b.book_category_id = bc.id
+where b.name = 'Lord of the Files';
+
 -- remove 'all' from UI with list.remove(0)
 
 -- Us 4
