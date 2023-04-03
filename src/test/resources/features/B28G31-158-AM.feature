@@ -1,4 +1,4 @@
-@B28G31-158-AM
+@B28G31-158-AM @namid
 Feature: As a librarian, I want to know which genre of books is being borrowed the most
 @ui @db
   Scenario: verify the common book genre that’s being borrowed

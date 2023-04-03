@@ -1,4 +1,4 @@
-@B28G31-153 @ui
+@B28G31-153 @ui @namid
 Feature: Default
 
 	Background:

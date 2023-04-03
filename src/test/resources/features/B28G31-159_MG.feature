@@ -1,4 +1,4 @@
-@B28G31-159_MG
+@B28G31-159_MG @namid
 Feature: Books module
   As a librarian, I should be able to add new book into library
 

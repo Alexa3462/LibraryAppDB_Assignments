@@ -1,4 +1,4 @@
-@vs
+@vs @namid
 Feature: As a data consumer, I want UI and DB book categories are match.
   @ui @db
   Scenario: verify book categories with DB
