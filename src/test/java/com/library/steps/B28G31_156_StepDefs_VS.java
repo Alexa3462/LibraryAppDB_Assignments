@@ -46,4 +46,19 @@ public class B28G31_156_StepDefs_VS {
         actualCategoryList.remove(0);
 
     }
+
+    @Then("verify book categories must match book_categories table from db – VS")
+    public void verifyBookCategoriesMustMatchBook_categoriesTableFromDbVS() {
+
+        DB_Util.runQuery("select name from book_categories");
+
+        List<String> expectedCategoryList = DB_Util.getColumnDataAsList(1);
+
+        Assert.assertEquals(expectedCategoryList,actualCategoryList);
+
+
+
+
+
+    }
 }
