@@ -9,6 +9,10 @@ import java.util.List;
 
 public class BookPage extends BasePage {
 
+
+    @FindBy (id = "book_categories")
+    public WebElement allCategories ;
+
     @FindBy(xpath = "//table/tbody/tr")
     public List<WebElement> allRows;
 
