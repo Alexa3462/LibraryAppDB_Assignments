@@ -2,6 +2,7 @@ package com.library.steps;
 
 import com.library.pages.DashBoardPage;
 import com.library.pages.LoginPage;
+import com.library.utility.BrowserUtil;
 import com.library.utility.DB_Util;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,6 +24,7 @@ public class B28G31_160_StepDefs_EL {
 
     @When("the librarian gets borrowed books number")
     public void the_librarian_gets_borrowed_books_number() {
+        BrowserUtil.waitForVisibility(dashBoardPage.borrowedBooksNumber,2);
         actualBorrowedBooksNumber = dashBoardPage.borrowedBooksNumber.getText();
     }
 
@@ -36,7 +38,7 @@ public class B28G31_160_StepDefs_EL {
         System.out.println("expectedBorrowedBookNumbers = " + expectedBorrowedBookNumbers);
         System.out.println("actualBorrowedBooksNumber = " + actualBorrowedBooksNumber);
 
-        Assert.assertEquals(actualBorrowedBooksNumber,expectedBorrowedBookNumbers);
+        Assert.assertEquals(expectedBorrowedBookNumbers,actualBorrowedBooksNumber);
     }
 
 }
